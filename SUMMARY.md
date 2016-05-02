@@ -1,6 +1,6 @@
-# Sumário
+# Summary
 
 * [Introdução](introducao.md)
-* Linguagem de Marcação
+* [Linguagem de Marcação](linguagem_de_marcacao.md)
 * [Tipos de Dados](tipos_de_dados.md)
 
