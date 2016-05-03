@@ -32,4 +32,4 @@ name:
 
 Utilize `matcher_message` para a mensagem de erro a ser apresentada ao usuário.
 
-**Importante:** O `matcher` deverá ser informado sem as barras delimitadoras. Correto: Foo|Bar; Errado: /Foo|Bar/.
+**Importante:** O `matcher` deverá ser informado sem as barras delimitadoras. Correto: `Foo|Bar`; Errado: `/Foo|Bar/`.
