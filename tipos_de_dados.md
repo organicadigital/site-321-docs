@@ -125,3 +125,89 @@ meeting:
   type: date_time
   format: "DD/MM/YYYY HH:mm:ss"
 ```
+
+# slug
+
+Utilizado para gerar URL’s amigáveis. Conta com a opção abaixo:
+
+* `canditate: nome_campo` - Referência um campo para ser utilizado caso o `slug`.
+
+Exemplo:
+```
+post_title:
+  label: Post Title
+  required: true
+friendly_id:
+  label: Friendly ID
+  type: slug
+  candidate: post_title
+```
+
+# email
+
+Utilizado para especificar e-mails. É feita uma validação básica verificando se a informação é um e-mail válido.
+
+Exemplo:
+```
+email:
+  label: E-mail
+  type: email
+```
+
+# integer
+
+Utilizado para cadastrar números inteiros.
+
+Exemplo:
+```
+age:
+  label: Age
+  type: integer
+```
+
+# auto_increment
+
+Utilizado para sequência numérica simples.
+
+Exemplo:
+```
+id:
+  label: ID
+  type: auto_increment
+```
+
+# currency
+
+Utilizado para valores tipo moeda. Aceita as seguintes opções:
+
+* `prefix: 'R$'` - Prefixo da moeda. Default: 'R$'
+* `cents_separator: ','` - Separador de centavos. Default: ','
+* `thousands_separator: '.'` - Separador de milhar. Default: '.'
+
+Exemplo:
+```
+salary:
+  label: Salary
+  type: currency
+  prefix: 'US$'
+  cents_separator: '.'
+  thousands_separator: ','
+```
+
+# choice
+
+Permite a seleção de um item declarado em `options`. A opção declarada é mantida como um campo `string`.
+
+`options` recebe uma lista de opções, com `label` (Opção visual para o usuário selecionar) e `value` (valor do campo select que irá no submit do formulário).
+
+Exemplo:
+```
+creditcard_type:
+  label: Credit Card Type
+  type: choice
+  options:
+    - label: Visa
+      value: visa
+    - label: Mastercard
+      value: master
+```
