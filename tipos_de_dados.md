@@ -45,8 +45,8 @@ description:
 
 Editor de código rico, com syntax higlight. Conta com as seguintes opções:
 
-* `mode`: "css" - Tipo de sintaxe (CSS, HTML, Ruby, PHP, ...)
-* `theme`: "monokai"  - Tema padrão do Highlight (Monokai, Github, …)
+* `mode: css` - Tipo de sintaxe (CSS, HTML, Ruby, PHP, ...)
+* `theme: monokai`  - Tema padrão do Highlight (Monokai, Github, …)
 
 Utiliza o Editor [Ace](https://ace.c9.io/). Para todas as opções de `mode` e `theme`, consultar https://ace.c9.io/build/kitchen-sink.html.
 
@@ -57,5 +57,19 @@ css:
   type: code_editor
   mode: css
   theme: github # Default: monokai
+```
+
+# image
+
+Cadastro de imagens. Conta também com as opções abaixo:
+
+* `multiple: false` - Permite o cadastro de várias imagens no mesmo item, quando for `true`. Default: `false`.
+* `legend: false` - Permite a exibição de uma legenda quando `true` (recomendamos usar esse campo como o `alt` da imagem). Default: false
+
+Exemplo:
+```
+avatar:
+  label: Avatar
+  type: image
 ```
 
