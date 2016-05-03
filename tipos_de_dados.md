@@ -73,3 +73,55 @@ avatar:
   type: image
 ```
 
+# document
+
+Cadastro de documentos (pdfs, textos.). Conta também com as opções abaixo:
+
+* `multiple: false` - Permite o cadastro de vários documentos no mesmo item, quando for `true`. Default: `false`.
+* `legend: false` - Permite a exibição de uma legenda quando `true`. Default: false
+
+Exemplo:
+```
+curriculum:
+  label: Curriculum
+  type: document
+```
+
+# boolean
+
+Checkbox clássico. Se estiver marcado é `true`, se não estiver é `false`.
+
+Exemplo:
+```
+enabled:
+  label: Enabled?
+  type: boolean
+```
+
+# date
+
+Datepicker para seleção de datas. O formato da data pode ser especificado com a opção abaixo:
+
+* `format: "DD/MM/YYYY"` - Formato de apresentação da data. Para uma referência completa, consultar http://momentjs.com/docs/#/displaying/format/. Default: `"DD/MM/YYYY"` .
+
+Exemplo:
+```
+birthday:
+  label: Birthday
+  type: date
+  format: "DD/MM/YYYY"
+```
+
+# date_time
+
+Datepicker para seleção de datas e horas. O formato da data pode ser especificado com a opção abaixo:
+
+* `format: "DD/MM/YYYY HH:mm:ss"` - Formato de apresentação da data e hora. Para uma referência completa, consultar http://momentjs.com/docs/#/displaying/format/. Default: `"DD/MM/YYYY HH:mm:ss"` .
+
+Exemplo:
+```
+meeting:
+  label: Meeting
+  type: date_time
+  format: "DD/MM/YYYY HH:mm:ss"
+```
