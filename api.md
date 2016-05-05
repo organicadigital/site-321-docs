@@ -24,7 +24,65 @@ Caso você queira retornar as informações de uma API específica, utilize:
 
 ### Busca de dados
 
-TODO explicar como buscar dados usando os parâmetros
+Dado o seguinte template:
+
+```
+/api/v2/<token>/contents/projects
+```
+
+```
+{
+  current_page: 1,
+  next_page: null,
+  total_pages: 1,
+  total_count: 3,
+  limit: 20,
+  items: [
+    {
+      name: "Design XYZ",
+      id: "f7a7646d-0800-4848-9627-02d8d977ebcc",
+      type: "design",
+      customer_id: "115f9220-1300-11e6-a148-3e1d05defe78",
+      created_at: "2016-04-22T12:02:20.974-03:00",
+      updated_at: "2016-04-22T12:02:20.974-03:00"
+    },
+    {
+      name: "Site Foo Bar",
+      id: "43f025cf-3201-4417-8211-4e58e7fec18d",
+      type: "site",
+      customer_id: "115f9658-1300-11e6-a148-3e1d05defe78",
+      created_at: "2016-04-22T12:02:11.604-03:00",
+      updated_at: "2016-04-22T12:02:11.604-03:00"
+    },
+    {
+      name: "Landing page ABC",
+      id: "43f025cf-3201-4417-8211-4e58e7fec18d",
+      type: "landing_page",
+      customer_id: "115f9658-1300-11e6-a148-3e1d05defe78",
+      created_at: "2016-04-22T12:02:11.604-03:00",
+      updated_at: "2016-04-22T12:02:11.604-03:00"
+    }
+  ]
+}
+```
+
+- Para buscar dados por um determinado campo e valor:
+
+```
+/api/v2/<token>/contents/projects?search[type]=site
+```
+
+- Para buscar dados por um determinado campo e múltiplos valores:
+
+```
+/api/v2/<token>/contents/projects?search[type][]=site&search[type][]=design
+```
+
+- Para buscar dados por múltiplos campos:
+
+```
+/api/v2/<token>/contents/projects?search[type]=site&search[customer_id]=115f9658-1300-11e6-a148-3e1d05defe78
+```
 
 ## Menus
 
