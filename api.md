@@ -16,13 +16,14 @@ Para listar todos os templates (Cadastros ou Páginas), utilize a seguinte API:
 /api/v2/<token>/contents
 ```
 
+### Listagem de Dados
 Caso você queira retornar as informações de uma API específica, utilize:
 
 ```
 /api/v2/<token>/contents/<nome_do_template>
 ```
 
-### Busca de dados
+### Pesquisa de dados
 
 Dado o seguinte template:
 
@@ -83,6 +84,19 @@ Dado o seguinte template:
 ```
 /api/v2/<token>/contents/projects?search[type]=site&search[customer_id]=115f9658-1300-11e6-a148-3e1d05defe78
 ```
+
+### Criação de Registros
+
+Caso você tenha habilitado a inserção de dados via API, você pode utilizar chamadas POST para insersão de dados. 
+
+Para isso, utilize o nome dos campos como parâmetros. O exemplo abaixo utiliza [curl](https://curl.haxx.se/) para insersão de dados no cadastro:
+
+```
+curl --data "name=Website&type=site&customer_id=115f9658-1300-11e6-a148-3e1d05defe78" / 
+  http://localhost:3000/api/v2/<token>/contents/projects
+```
+
+Por padrão os dados são inseridos como inativos. Para deixá-los ativos, utilize `active=true` juntamente aos demais parâmetros.
 
 ## Menus
 
