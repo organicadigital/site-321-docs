@@ -98,6 +98,26 @@ enabled:
   type: boolean
 ```
 
+# color
+
+Campo de seleção de cores. Por padrão, abre uma lista de cores pré-definidas para o usuário selecionar:
+
+Exemplo:
+```
+color:
+  label: Select the best color for you
+  type: color
+```
+
+Se for desejado um colopicker com maior precisão, utilze o campo `simple: false`:
+
+```
+color:
+  label: Mix your color
+  type: color
+  simple: false
+```
+
 # date
 
 Datepicker para seleção de datas. O formato da data pode ser especificado com a opção abaixo:
