@@ -27,6 +27,10 @@ category:
 
 O mapeamento acima lhe permitirá cadastrar categorias e relacionar posts a elas. Um novo campo em "Post", do tipo select, aparecerá para escolha da categoria.
 
+### Múltiplos Registros
+
+Caso você queira relacionar mais de uma categoria no post, poderá utilizar o atributo `multiple: true`. Ele criará uma caixa de seleção múltipla estilo tags.
+
 ## One-to-Many
 
 Da mesma forma que no relacionamento Many-to-One, podemos fazer o relacionamento inverso.
