@@ -188,6 +188,17 @@ email:
   type: email
 ```
 
+# url
+
+Utilizado para especificar URLs. É feita uma validação básica verificando se a informação é uma URL (se começa com http://, https://, ...).
+
+Exemplo:
+```
+url:
+  label: URL
+  type: url
+```
+
 # integer
 
 Utilizado para cadastrar números inteiros.
