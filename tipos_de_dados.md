@@ -109,6 +109,18 @@ color:
   type: color
 ```
 
+Você poderá personalizar as cores a serem selecionadas, com o campo `options`:
+
+```
+color:
+  label: Select the best color for you
+  type: color
+  options:
+    - 'black'
+    - '#FF0000'
+    - 'rgb(255,255,255)'
+```
+
 Se for desejado um colopicker com maior precisão, utilze o campo `simple: false`:
 
 ```
@@ -117,6 +129,8 @@ color:
   type: color
   simple: false
 ```
+
+Será criado um componente de "mistura" de cores.
 
 # date
 
