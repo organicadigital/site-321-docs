@@ -5,6 +5,6 @@
 * [Tipos de Dados](tipos_de_dados.md)
 * [Validação](validacao.md)
 * [Relacionamentos](relacionamentos.md)
-* [API](api.md)
 * [Layout](layout.md)
+* [API](api.md)
 
