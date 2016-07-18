@@ -17,7 +17,7 @@ Abaixo um exemplo com campos do tipo `editor`:
 
 ```
 content:
-  label: Conteúdo
+  label: Rich Content
   type: editor
   default: >
     This is a <strong>HTML field</strong>.
