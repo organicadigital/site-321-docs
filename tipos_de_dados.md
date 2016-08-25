@@ -256,3 +256,16 @@ creditcard_type:
     - label: Mastercard
       value: master
 ```
+
+# location
+
+Cria um campo especial que permite a seleção de um endereço, integrando com o Google Maps. Permite que o usuário insira o endereço com um autocomplete, buscando tanto por endereço quanto por nome de estabelecimento.
+
+Além disso, o usuário pode selecionar o ponto no mapa com drag and drop do pin, e informar manualmente latitude e longitude.
+
+Exemplo:
+```
+place:
+  label: Place
+  type: location
+```
