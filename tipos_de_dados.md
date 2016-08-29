@@ -41,6 +41,15 @@ description:
   type: editor
 ```
 
+Caso seja necessário um editor mais simples, sem muitos botões de formatação, é possível utilizar o editor mini, como segue:
+
+```
+description:
+  label: Description
+  type: editor
+  mode: mini
+```
+
 # code_editor
 
 Editor de código rico, com syntax higlight. Conta com as seguintes opções:
