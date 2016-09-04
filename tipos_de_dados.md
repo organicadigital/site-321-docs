@@ -266,6 +266,30 @@ creditcard_type:
       value: master
 ```
 
+# template
+
+Cria um campo select que mostra o nome dos outros templates. Salvará o slug do template relacionado, e trará as APIs do template relacionado.
+
+Levando em conta um template `Newsletter`, assim:
+
+```
+email:
+  label: E-mail
+  type: email
+  required: true
+```
+
+Imagine um outro template `Theme`, que possui uma configuração do formulário de submissão para inscrição na newsletter:
+
+```
+news_form:
+  label: Newsletter Form
+  type: template
+  default: newsletter
+```
+
+Isso trará todos os templates para um select, deixando como default o com slug `newsletter`.
+
 # location
 
 Cria um campo especial que permite a seleção de um endereço, integrando com o Google Maps. Permite que o usuário insira o endereço com um autocomplete, buscando tanto por endereço quanto por nome de estabelecimento.
