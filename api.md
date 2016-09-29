@@ -23,6 +23,20 @@ Caso você queira retornar as informações de uma API específica, utilize:
 /api/v2/<token>/contents/<nome_do_template>
 ```
 
+#### Filtro por Locale
+
+Na utilização de vários locales, é possível filtrar por um idioma específico. Supondo que o site seja em Português do Brasil e Inglês (pt-BR e en), listando da forma tradicional trará todos os dados, agrupados por locale:
+
+```
+/api/v2/<token>/contents/<nome_do_template>
+```
+
+Se você quiser apenas um idioma, é possível especificar da seguinte forma:
+
+```
+/api/v2/<token>/contents/<nome_do_template>/<locale>
+```
+
 ### Pesquisa de dados
 
 Dado o seguinte template:
