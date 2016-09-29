@@ -155,7 +155,7 @@ birthday:
   format: "DD/MM/YYYY"
 ```
 
-# date_time
+# datetime
 
 Datepicker para seleção de datas e horas. O formato da data pode ser especificado com a opção abaixo:
 
