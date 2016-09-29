@@ -165,7 +165,7 @@ Exemplo:
 ```
 meeting:
   label: Meeting
-  type: date_time
+  type: datetime
   format: "DD/MM/YYYY HH:mm:ss"
 ```
 
