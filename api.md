@@ -34,8 +34,10 @@ Na utilização de vários locales, é possível filtrar por um idioma específi
 Se você quiser apenas um idioma, é possível especificar da seguinte forma:
 
 ```
-/api/v2/<token>/contents/<nome_do_template>/<locale>
+/api/v2/<token>/contents/<nome_do_template>?only_locale=<locale>
 ```
+
+Esse parâmetro vale para a busca de registros únicos, trazendo somente o idioma especificado.
 
 ### Pesquisa de dados
 
@@ -101,16 +103,28 @@ Dado o seguinte template:
 
 ### Criação de Registros
 
+
+**IMPORTANTE:** Para utilizar em formulários públicos, como formulários de contato em sites, leia mais abaixo e NUNCA utilize seu token principal.
+
 Caso você tenha habilitado a inserção de dados via API, você pode utilizar chamadas POST para insersão de dados. 
 
 Para isso, utilize o nome dos campos como parâmetros. O exemplo abaixo utiliza [curl](https://curl.haxx.se/) para insersão de dados no cadastro:
 
 ```
 curl --data "name=Website&type=site&customer_id=115f9658-1300-11e6-a148-3e1d05defe78" / 
-  http://localhost:3000/api/v2/<token>/contents/projects
+  http://beta.site321.com.br/api/v2/<token>/contents/projects
 ```
 
 Por padrão os dados são inseridos como inativos. Para deixá-los ativos, utilize `active=true` juntamente aos demais parâmetros.
+
+Além disso, você poderá passar um parâmetro especial, chamado `redirect_url`, com uma URL para redirectionar após salvar os registros com sucesso. Em caso de falha ao salvar, haverá um redirecionamento para a URL de origem, com os erros em um parâmetro chamado `errors`.
+
+
+#### Submissão em Formulários Públicos
+
+O Site 321 fornece uma forma conveniente de criar formulários de contato, através de URLs que recebem submissões públicas. Para isso, habilite a insersão via API, vá na página de APIs e pegue a URL correspondente.
+
+A URL se parecerá com `http://beta.site321.com.br/api/contents/<public_token>`. Veja que essa URL esconde o nome do template, garantindo maior segurança.
 
 ## Menus
 
