@@ -101,6 +101,20 @@ Dado o seguinte template:
 /api/v2/<token>/contents/projects?search[type]=site&search[customer_id]=115f9658-1300-11e6-a148-3e1d05defe78
 ```
 
+### Busca de Registro Único
+
+Para listar apenas um registro específico, utilize a seguinte API:
+
+```
+/api/v2/<token>/contents/<nome_do_template>/<id_do_content>
+```
+
+Assim você terá acesso ao registro desejado. Se o site tiver suporte a i18n, utilize o `?only_locale=` para trazer somente determinado idioma. P. ex:
+
+```
+/api/v2/<token>/contents/<nome_do_template>/<id_do_content>?only_locale=<locale>
+```
+
 ### Criação de Registros
 
 
@@ -125,6 +139,21 @@ Além disso, você poderá passar um parâmetro especial, chamado `redirect_url`
 O Site 321 fornece uma forma conveniente de criar formulários de contato, através de URLs que recebem submissões públicas. Para isso, habilite a insersão via API, vá na página de APIs e pegue a URL correspondente.
 
 A URL se parecerá com `http://beta.site321.com.br/api/contents/<public_token>`. Veja que essa URL esconde o nome do template, garantindo maior segurança.
+
+### Alteração de Registros
+
+Para alterar um registro, envie um verbo PUT para a URL do registro. Ex:
+
+```
+curl -X PUT --data "name=Website&type=site&customer_id=115f9658-1300-11e6-a148-3e1d05defe78" / 
+  http://beta.site321.com.br/api/v2/<token>/contents/projects/115f9658-1300-11e6-a148-3e1d05defggj
+```
+
+O padrão de URL será o mesmo de leitura de registro único, mudando apenas o verbo REST:
+
+```
+/api/v2/<token>/contents/<nome_do_template>/<id_do_content>
+```
 
 ## Menus
 
