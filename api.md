@@ -155,6 +155,15 @@ O padrão de URL será o mesmo de leitura de registro único, mudando apenas o v
 /api/v2/<token>/contents/<nome_do_template>/<id_do_content>
 ```
 
+No caso de sites com i18n, submeta os registros da seguinte forma: `<locale>[<nome_atributo>]=<valor>`. Ex:
+
+```
+curl -X PUT --data "pt-BR[name]=MeuSite&en[name]=MyWebSite" / 
+  http://beta.site321.com.br/api/v2/<token>/contents/projects/115f9658-1300-11e6-a148-3e1d05defggj
+```
+
+**IMPORTANTE:** Atributos omitidos serão considerados nulos. Observe isso para não perder informações de traduções, p. ex.
+
 ## Menus
 
 Da mesma forma que os templates, os Menus possuem API disponível. Para listar todos os menus, utilize:
