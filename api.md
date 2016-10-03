@@ -164,6 +164,16 @@ curl -X PUT --data "pt-BR[name]=MeuSite&en[name]=MyWebSite" /
 
 **IMPORTANTE:** Atributos omitidos serão considerados nulos. Observe isso para não perder informações de traduções, p. ex.
 
+### Exclusão de Registros
+
+Para excluir um registro, envie um verbo DELETE para o endpoint do registro. Ex:
+
+```
+curl -X DELETE http://beta.site321.com.br/api/v2/<token>/contents/projects/115f9658-1300-11e6-a148-3e1d05defggj
+```
+
+Isso excluirá o registro, incluindo suas traduções.
+
 ## Menus
 
 Da mesma forma que os templates, os Menus possuem API disponível. Para listar todos os menus, utilize:
