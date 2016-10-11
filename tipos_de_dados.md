@@ -254,11 +254,14 @@ Permite a seleção de um item declarado em `options`. A opção declarada é ma
 
 `options` recebe uma lista de opções, com `label` (Opção visual para o usuário selecionar) e `value` (valor do campo select que irá no submit do formulário).
 
+Se for interessante disponibilizar várias opções, utilize `multiple: true`.
+
 Exemplo:
 ```
 creditcard_type:
   label: Credit Card Type
   type: choice
+  multiple: true
   options:
     - label: Visa
       value: visa
