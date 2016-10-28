@@ -103,6 +103,7 @@ category:
 ```
 
 * Template `post`:
+
 ```
 title:
     label: Title
