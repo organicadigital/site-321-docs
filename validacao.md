@@ -33,3 +33,23 @@ name:
 Utilize `matcher_message` para a mensagem de erro a ser apresentada ao usuário.
 
 **Importante:** O `matcher` deverá ser informado sem as barras delimitadoras. Correto: `Foo|Bar`; Errado: `/Foo|Bar/`.
+
+## max_length
+
+Permite definir o tamanho máximo do conteúdo do campo.
+
+O exemplo abaixo fará a validação do tamanho máximo do texto, impedindo que um registro que extrapole esse tamanho seja salvo:
+
+```
+description:
+  label: Description
+  type: text
+  max_length: 200
+```
+
+Além disso, cria uma representação visual da quantidade de caracteres já usados.
+
+Ao habilitar o campo `max_length`, algumas outras opções ficarão disponíveis:
+
+* `stop_on_max_length`: Caso `false`, não bloqueia a entrada dos dados (default: `true`);
+*  `count_down_text`: Mensagem apresentada abaixo do campo, mostrando os campos restantes (default: `Caracteres restantes:`)
