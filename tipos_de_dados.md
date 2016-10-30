@@ -305,3 +305,15 @@ place:
   label: Place
   type: location
 ```
+
+# meta_description
+
+Campo especial com validações para desenvolvimento de uma meta description, para o Google, demonstrando o tamanho ideal do texto.
+
+Exemplo:
+
+```
+description:
+  label: Meta description for Google
+  type: meta_description
+```
