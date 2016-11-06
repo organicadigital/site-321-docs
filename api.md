@@ -23,6 +23,33 @@ Caso você queira retornar as informações de uma API específica, utilize:
 /api/v2/<token>/contents/<nome_do_template>
 ```
 
+#### Limite de Registros
+
+Por questões de performance, a listagem dos registros possui um limite. O limite padrão são de 20 registros por página.
+
+Se você precisar, poderá modificar esse limite. Mas por segurança, o máximo de registros que você poderá trazer serão 100 por vez.
+
+Utilize o parâmetro `per` para modificar esse limite.
+
+Ex:
+
+```
+/api/v2/<token>/contents/<nome_do_template>?per=100
+```
+
+
+#### Paginação
+
+Como você provavelmente terá mais do que 100 registro em alguns cadastros, será necessário iterar as páginas.
+
+Para isso, utilize o padrâmetro `page`.
+
+Ex:
+
+```
+/api/v2/<token>/contents/<nome_do_template>?per=100
+```
+
 #### Filtro por Locale
 
 Na utilização de vários locales, é possível filtrar por um idioma específico. Supondo que o site seja em Português do Brasil e Inglês (pt-BR e en), listando da forma tradicional trará todos os dados, agrupados por locale:
