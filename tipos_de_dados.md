@@ -269,6 +269,21 @@ creditcard_type:
       value: master
 ```
 
+# user
+
+Herdando o comportamento do campo `choice`, permite criar uma seleção de usuários. Cria um grupo de checkboxes, ou um select único, de acordo com o que for especificado.
+
+Permite escolher um escopo de role que deverá ser respeitado. Se nenhuma role for informada, pegará todos os usuários do site.
+
+```
+user:
+    label: User
+    type: user
+    role: Role Name
+    required: true
+    multiple: false
+```
+
 # template
 
 Cria um campo select que mostra o nome dos outros templates. Salvará o slug do template relacionado, e trará as APIs do template relacionado.
@@ -317,3 +332,4 @@ description:
   label: Meta description for Google
   type: meta_description
 ```
+
