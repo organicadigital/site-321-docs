@@ -273,7 +273,7 @@ creditcard_type:
 
 Herdando o comportamento do campo `choice`, permite criar uma seleção de usuários. Cria um grupo de checkboxes, ou um select único, de acordo com o que for especificado.
 
-Permite escolher um escopo de role que deverá ser respeitado. Se nenhuma role for informada, pegará todos os usuários do site.
+Permite escolher um escopo de role que deverá ser respeitado. Se nenhuma role for informada, pegará todos os usuários do site. 
 
 ```
 user:
