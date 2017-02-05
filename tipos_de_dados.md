@@ -9,6 +9,7 @@ Confira a seguir os tipos disponíveis.
 Tipo padrão de texto. Quando nenhum type for especificado para o item, o Site 321 irá inferir que este é do tipo `string`.
 
 Exemplo:
+
 ```
 firstname:
   label: First Name
@@ -24,6 +25,7 @@ lastname: # type não definido, assumindo o padrão string
 Tipo texto grande. A diferença do tipo `text` para o tipo `string` é o tamanho da caixa de texto que ficará disponível para gerenciar o conteúdo. Será criada uma `<textarea>`.
 
 Exemplo:
+
 ```
 description:
   label: Description
@@ -35,6 +37,7 @@ description:
 Editor rico. É possível alterar o código HTML, adicionar classes, ID’s, colocar imagens, formatação de texto, alinhamento. Utiliza o plugin [CKeditor](http://ckeditor.com/).
 
 Exemplo:
+
 ```
 description:
   label: Description
@@ -50,16 +53,17 @@ description:
   mode: mini
 ```
 
-# code_editor
+# code\_editor
 
 Editor de código rico, com syntax higlight. Conta com as seguintes opções:
 
-* `mode: css` - Tipo de sintaxe (CSS, HTML, Ruby, PHP, ...)
-* `theme: monokai`  - Tema padrão do Highlight (Monokai, Github, …)
+* `mode: css` - Tipo de sintaxe \(CSS, HTML, Ruby, PHP, ...\)
+* `theme: monokai`  - Tema padrão do Highlight \(Monokai, Github, …\)
 
-Utiliza o Editor [Ace](https://ace.c9.io/). Para todas as opções de `mode` e `theme`, consultar https://ace.c9.io/build/kitchen-sink.html.
+Utiliza o Editor [Ace](https://ace.c9.io/). Para todas as opções de `mode` e `theme`, consultar [https://ace.c9.io/build/kitchen-sink.html](https://ace.c9.io/build/kitchen-sink.html).
 
 Exemplo:
+
 ```
 css:
   label: CSS
@@ -73,23 +77,29 @@ css:
 Cadastro de imagens. Conta também com as opções abaixo:
 
 * `multiple: false` - Permite o cadastro de várias imagens no mesmo item, quando for `true`. Default: `false`.
-* `legend: false` - Permite a exibição de uma legenda quando `true` (recomendamos usar esse campo como o `alt` da imagem). Default: false
+* `legend: false` - Permite a exibição de uma legenda quando `true` \(recomendamos usar esse campo como o `alt` da imagem\). Default: `false`
+* `sizes`: Tamanhos pré-definidos de imagens que já deverão ser geradas. Isso evitará latência na primeira requisição desses tamanhos.
 
 Exemplo:
+
 ```
 avatar:
   label: Avatar
   type: image
+  sizes:
+    - 100x100
+    - 200x200#
 ```
 
 # document
 
-Cadastro de documentos (pdfs, textos.). Conta também com as opções abaixo:
+Cadastro de documentos \(pdfs, textos.\). Conta também com as opções abaixo:
 
 * `multiple: false` - Permite o cadastro de vários documentos no mesmo item, quando for `true`. Default: `false`.
 * `legend: false` - Permite a exibição de uma legenda quando `true`. Default: false
 
 Exemplo:
+
 ```
 curriculum:
   label: Curriculum
@@ -101,6 +111,7 @@ curriculum:
 Checkbox clássico. Se estiver marcado é `true`, se não estiver é `false`.
 
 Exemplo:
+
 ```
 enabled:
   label: Enabled?
@@ -112,6 +123,7 @@ enabled:
 Campo de seleção de cores. Por padrão, abre uma lista de cores pré-definidas para o usuário selecionar:
 
 Exemplo:
+
 ```
 color:
   label: Select the best color for you
@@ -145,9 +157,10 @@ Será criado um componente de "mistura" de cores.
 
 Datepicker para seleção de datas. O formato da data pode ser especificado com a opção abaixo:
 
-* `format: "DD/MM/YYYY"` - Formato de apresentação da data. Para uma referência completa, consultar http://momentjs.com/docs/#/displaying/format/. Default: `"DD/MM/YYYY"` .
+* `format: "DD/MM/YYYY"` - Formato de apresentação da data. Para uma referência completa, consultar [http://momentjs.com/docs/\#/displaying/format/](http://momentjs.com/docs/#/displaying/format/). Default: `"DD/MM/YYYY"` .
 
 Exemplo:
+
 ```
 birthday:
   label: Birthday
@@ -159,9 +172,10 @@ birthday:
 
 Datepicker para seleção de datas e horas. O formato da data pode ser especificado com a opção abaixo:
 
-* `format: "DD/MM/YYYY HH:mm:ss"` - Formato de apresentação da data e hora. Para uma referência completa, consultar http://momentjs.com/docs/#/displaying/format/. Default: `"DD/MM/YYYY HH:mm:ss"` .
+* `format: "DD/MM/YYYY HH:mm:ss"` - Formato de apresentação da data e hora. Para uma referência completa, consultar [http://momentjs.com/docs/\#/displaying/format/](http://momentjs.com/docs/#/displaying/format/). Default: `"DD/MM/YYYY HH:mm:ss"` .
 
 Exemplo:
+
 ```
 meeting:
   label: Meeting
@@ -176,6 +190,7 @@ Utilizado para gerar URL’s amigáveis. Conta com a opção abaixo:
 * `canditate: nome_campo` - Referência um campo para ser utilizado caso o `slug`.
 
 Exemplo:
+
 ```
 post_title:
   label: Post Title
@@ -191,6 +206,7 @@ friendly_id:
 Utilizado para especificar e-mails. É feita uma validação básica verificando se a informação é um e-mail válido.
 
 Exemplo:
+
 ```
 email:
   label: E-mail
@@ -199,9 +215,10 @@ email:
 
 # url
 
-Utilizado para especificar URLs. É feita uma validação básica verificando se a informação é uma URL (se começa com http://, https://, ...).
+Utilizado para especificar URLs. É feita uma validação básica verificando se a informação é uma URL \(se começa com http://, https://, ...\).
 
 Exemplo:
+
 ```
 url:
   label: URL
@@ -213,17 +230,19 @@ url:
 Utilizado para cadastrar números inteiros.
 
 Exemplo:
+
 ```
 age:
   label: Age
   type: integer
 ```
 
-# auto_increment
+# auto\_increment
 
 Utilizado para sequência numérica simples.
 
 Exemplo:
+
 ```
 id:
   label: ID
@@ -239,6 +258,7 @@ Utilizado para valores tipo moeda. Aceita as seguintes opções:
 * `thousands_separator: '.'` - Separador de milhar. Default: '.'
 
 Exemplo:
+
 ```
 salary:
   label: Salary
@@ -252,11 +272,12 @@ salary:
 
 Permite a seleção de um item declarado em `options`. A opção declarada é mantida como um campo `string`.
 
-`options` recebe uma lista de opções, com `label` (Opção visual para o usuário selecionar) e `value` (valor do campo select que irá no submit do formulário).
+`options` recebe uma lista de opções, com `label` \(Opção visual para o usuário selecionar\) e `value` \(valor do campo select que irá no submit do formulário\).
 
 Se for interessante disponibilizar várias opções, utilize `multiple: true`.
 
 Exemplo:
+
 ```
 creditcard_type:
   label: Credit Card Type
@@ -273,7 +294,7 @@ creditcard_type:
 
 Herdando o comportamento do campo `choice`, permite criar uma seleção de usuários. Cria um grupo de checkboxes, ou um select único, de acordo com o que for especificado.
 
-Permite escolher um escopo de role que deverá ser respeitado. Se nenhuma role for informada, pegará todos os usuários do site. 
+Permite escolher um escopo de role que deverá ser respeitado. Se nenhuma role for informada, pegará todos os usuários do site.
 
 ```
 user:
@@ -315,13 +336,14 @@ Cria um campo especial que permite a seleção de um endereço, integrando com o
 Além disso, o usuário pode selecionar o ponto no mapa com drag and drop do pin, e informar manualmente latitude e longitude.
 
 Exemplo:
+
 ```
 place:
   label: Place
   type: location
 ```
 
-# meta_description
+# meta\_description
 
 Campo especial com validações para desenvolvimento de uma meta description, para o Google, demonstrando o tamanho ideal do texto.
 
@@ -332,4 +354,6 @@ description:
   label: Meta description for Google
   type: meta_description
 ```
+
+
 
