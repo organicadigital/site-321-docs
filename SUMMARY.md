@@ -10,5 +10,5 @@
 * [Validação](validacao.md)
 * [Variáveis](variaveis.md)
 * [Layout](layout.md)
-* [Variáveis](variaveis.md)
+* [Notificações](notificacoes.md)
 
