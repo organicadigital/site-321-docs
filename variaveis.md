@@ -1,6 +1,6 @@
-# Variáveis
+# Expressões
 
-Em algum locais é possível utilizar algumas variáveis e pequenas regras de negócio.
+Em algum locais é possível utilizar algumas expressões e pequenas regras de negócio.
 
 Para isso, utilizamos [Liquid](https://github.com/Shopify/liquid).
 
@@ -10,7 +10,7 @@ O Site 321 disponibiliza os dados em formato JSON para uso como variáveis.
 
 ## Filtros Personalizados
 
-Para simplificar a utilização das variáveis e regras de negócio, alguns filtros específicos do Site 321 foram criados. Confira abaixo.
+Para simplificar a utilização das expressões e regras de negócio, alguns filtros específicos do Site 321 foram criados. Confira abaixo.
 
 ### find_association
 
