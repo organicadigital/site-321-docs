@@ -46,6 +46,6 @@ content:
 Para acessar o e-mail do usuário através do template `log`, utilize a expressão da seguinte forma:
 
 ```javascript
-{% assign user = find_association user.id, module: 'user' %}
+{% assign user = user.id | find_association module: 'user' %}
 {{ user.email }}
 ```
