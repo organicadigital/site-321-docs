@@ -8,5 +8,7 @@
 * [Valores Padrão](valores_padrao.md)
 * [Campos Ocultos](campos_ocultos.md)
 * [Validação](validacao.md)
+* [Variáveis](variaveis.md)
 * [Layout](layout.md)
+* [Variáveis](variaveis.md)
 
