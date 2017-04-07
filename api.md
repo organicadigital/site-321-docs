@@ -10,13 +10,14 @@ As APIs implementam REST e o tipo de dados disponível é JSON.
 
 ## Templates
 
-Para listar todos os templates (Cadastros ou Páginas), utilize a seguinte API:
+Para listar todos os templates \(Cadastros ou Páginas\), utilize a seguinte API:
 
 ```
 /api/v2/<token>/contents
 ```
 
 ### Listagem de Dados
+
 Caso você queira retornar as informações de uma API específica, utilize:
 
 ```
@@ -37,7 +38,6 @@ Ex:
 /api/v2/<token>/contents/<nome_do_template>?per=100
 ```
 
-
 #### Paginação
 
 Como você provavelmente terá mais do que 100 registro em alguns cadastros, será necessário iterar as páginas.
@@ -50,9 +50,21 @@ Ex:
 /api/v2/<token>/contents/<nome_do_template>?per=100
 ```
 
+#### Registros Inativos
+
+Os dados dos templates podem estar ativos no site ou inativos. Quando eles estão inativos por padrão eles não aparecem na API do Site321.
+
+Utilize o parâmetro `include_inactive` para modificar este comportamento.
+
+Ex:
+
+```
+/api/v2/<token>/contents/<nome_do_template>?include_inactive=true
+```
+
 #### Filtro por Locale
 
-Na utilização de vários locales, é possível filtrar por um idioma específico. Supondo que o site seja em Português do Brasil e Inglês (pt-BR e en), listando da forma tradicional trará todos os dados, agrupados por locale:
+Na utilização de vários locales, é possível filtrar por um idioma específico. Supondo que o site seja em Português do Brasil e Inglês \(pt-BR e en\), listando da forma tradicional trará todos os dados, agrupados por locale:
 
 ```
 /api/v2/<token>/contents/<nome_do_template>
@@ -110,19 +122,19 @@ Dado o seguinte template:
 }
 ```
 
-- Para buscar dados por um determinado campo e valor:
+* Para buscar dados por um determinado campo e valor:
 
 ```
 /api/v2/<token>/contents/projects?search[type]=site
 ```
 
-- Para buscar dados por um determinado campo e múltiplos valores:
+* Para buscar dados por um determinado campo e múltiplos valores:
 
 ```
 /api/v2/<token>/contents/projects?search[type][]=site&search[type][]=design
 ```
 
-- Para buscar dados por múltiplos campos:
+* Para buscar dados por múltiplos campos:
 
 ```
 /api/v2/<token>/contents/projects?search[type]=site&search[customer_id]=115f9658-1300-11e6-a148-3e1d05defe78
@@ -144,10 +156,9 @@ Assim você terá acesso ao registro desejado. Se o site tiver suporte a i18n, u
 
 ### Criação de Registros
 
-
 **IMPORTANTE:** Para utilizar em formulários públicos, como formulários de contato em sites, leia mais abaixo e NUNCA utilize seu token principal.
 
-Caso você tenha habilitado a inserção de dados via API, você pode utilizar chamadas POST para insersão de dados. 
+Caso você tenha habilitado a inserção de dados via API, você pode utilizar chamadas POST para insersão de dados.
 
 Para isso, utilize o nome dos campos como parâmetros. O exemplo abaixo utiliza [curl](https://curl.haxx.se/) para insersão de dados no cadastro:
 
@@ -159,7 +170,6 @@ curl --data "name=Website&type=site&customer_id=115f9658-1300-11e6-a148-3e1d05de
 Por padrão os dados são inseridos como inativos. Para deixá-los ativos, utilize `active=true` juntamente aos demais parâmetros.
 
 Além disso, você poderá passar um parâmetro especial, chamado `redirect_url`, com uma URL para redirectionar após salvar os registros com sucesso. Em caso de falha ao salvar, haverá um redirecionamento para a URL de origem, com os erros em um parâmetro chamado `errors`.
-
 
 #### Submissão em Formulários Públicos
 
@@ -214,3 +224,6 @@ Se você quiser os dados de um menu específico, utilize:
 ```
 /api/v2/<token>/menus/<nome_do_menu>
 ```
+
+
+
