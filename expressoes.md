@@ -49,3 +49,21 @@ Para acessar o e-mail do usuário através do template `log`, utilize a express�
 {% assign user = user.id | find_association module: 'user' %}
 {{ user.email }}
 ```
+
+### api_query
+
+Executa uma busca em uma API do Site321. Exemplo:
+
+```javascript
+{% capture query_string %}
+  {
+    'name': {
+      'contains': ['Foo']
+    }
+  }
+{% endcapture %}
+
+{% assign data = query_string | api_query module: 'user' %}
+```
+
+A "query_string" neste caso sempre será em formato JSON, simplificando a construção do filtro.
