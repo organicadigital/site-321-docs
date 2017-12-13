@@ -50,12 +50,14 @@ Para acessar o e-mail do usuário através do template `log`, utilize a express�
 {{ user.email }}
 ```
 
-### api_call
+### filter_module
 
-Executa uma busca em uma API do Site321. Exemplo:
+Executa uma busca em um modelo do Site321. Exemplo:
 
 ```javascript
-{% assign data = 'search[name][contains][0]=Foo' | api_call 'user' %}
+{% assign data = '{"name":{"start":{"0":"B"}}}' | filter_module 'user', 'pt-BR' %}
 ```
 
-O primeiro argumento representa a query string a ser enviada. Consulte o tópico [Filtros](/filtros.md) para mais informações. Neste caso **não utilize** a interrogação no início da query.
+O primeiro argumento representa a query a ser enviada. Consulte o tópico [Filtros](/filtros.md) para mais informações. É uma representação JSON da busca, sendo mais fácil de construir para fins de leitura.   
+
+O último argumento é o locale a ser pesquisado.
