@@ -38,6 +38,22 @@ Imagine a API `/api/v2/<token>/contents/course` com os seguintes dados:
 
 Você poderá filtrar ela passando parâmetros por Query String, no seguinte formato: `/api/v2/<token>/contents/course?search[name][contains][0]=Foo&search[meta_description][start][0]=This`
 
-Como você pode ver, esse padrão de `search` permite a composição de diversos filtros na API. Você pode compor a query com diversos tipos de dados e filtros, respeitando o seguinte padrão:
+Como você pode ver, esse padrão de `search` permite a composição de diversos filtros na API. Você pode compor a query com diversos tipos de dados e filtros, respeitando o seguinte padrão: ```search[<field>][<type>][<index>]=<value>``` 
 
-* ```search[<field>][<type>][<index>]=<value>``` 
+Onde:
+
+*  ```<field>```: Nome do campo a ser buscado;
+*  ```<type>```: Tipo de busca a ser processada;
+*  ```<index>```: Índice de busca sendo 0 ou 1. Utilizado para tipos de busca com intervalo (between);
+*  ```<value>```: Valor da query.
+
+## Tipos Disponíveis
+
+### contains
+
+Faz a busca no campo vendo se ele contém o conteúdo, em qualquer parte do texto. Ex: `/api/v2/<token>/contents/course?search[name][contains][0]=Foo`
+
+### start
+
+Faz a busca no campo vendo se ele inicia com o conteúdo. Ex: `/api/v2/<token>/contents/course?search[name][start][0]=Foo`
+
