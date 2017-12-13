@@ -58,4 +58,4 @@ Executa uma busca em uma API do Site321. Exemplo:
 {% assign data = 'search[name][contains][0]=Foo' | api_call 'user' %}
 ```
 
-O primeiro argumento representa a query string a ser enviada. Consulte o tópico [Filtros](/filtros.md) para mais informações.
+O primeiro argumento representa a query string a ser enviada. Consulte o tópico [Filtros](/filtros.md) para mais informações. Neste caso **não utilize** a interrogação no início da query.
