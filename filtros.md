@@ -53,6 +53,8 @@ Onde:
 
 Faz a busca no campo vendo se ele contém o conteúdo, em qualquer parte do texto. Ex: `/api/v2/<token>/contents/course?search[name][contains][0]=Foo`
 
+Caso mais itens sejam passados, o comportamento será como em uma cláusula "IN" do SQL. Ex: `/api/v2/<token>/contents/course?search[name][contains][0]=Foo&search[name][contains][1]=Bar`
+
 ### start
 
 Faz a busca no campo vendo se ele inicia com o conteúdo. Ex: `/api/v2/<token>/contents/course?search[name][start][0]=Foo`
