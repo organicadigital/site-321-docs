@@ -46,24 +46,16 @@ content:
 Para acessar o e-mail do usuário através do template `log`, utilize a expressão da seguinte forma:
 
 ```javascript
-{% assign user = user.id | find_association module: 'user' %}
+{% assign user = user.id | find_association 'user' %}
 {{ user.email }}
 ```
 
-### api_query
+### api_call
 
 Executa uma busca em uma API do Site321. Exemplo:
 
 ```javascript
-{% capture query_string %}
-  {
-    'name': {
-      'contains': ['Foo']
-    }
-  }
-{% endcapture %}
-
-{% assign data = query_string | api_query module: 'user' %}
+{% assign data = 'search[name][contains][0]=Foo' | api_call 'user' %}
 ```
 
-A "query_string" neste caso sempre será em formato JSON, simplificando a construção do filtro.
+O primeiro argumento representa a query string a ser enviada. Consulte o tópico [Filtros](/filtros.md) para mais informações.
