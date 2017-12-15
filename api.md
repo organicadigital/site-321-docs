@@ -169,7 +169,7 @@ curl --data "name=Website&type=site&customer_id=115f9658-1300-11e6-a148-3e1d05de
 
 Por padrão os dados são inseridos como inativos. Para deixá-los ativos, utilize `active=true` juntamente aos demais parâmetros.
 
-Além disso, você poderá passar um parâmetro especial, chamado `redirect_url`, com uma URL para redirectionar após salvar os registros com sucesso. Em caso de falha ao salvar, haverá um redirecionamento para a URL de origem, com os erros em um parâmetro chamado `errors`.
+Além disso, você poderá passar um parâmetro especial, chamado `redirect_success`, com uma URL para redirectionar após salvar os registros com sucesso. Em caso de falha ao salvar, haverá um redirecionamento para a URL de origem, com os erros em um parâmetro chamado `errors`.
 
 #### Submissão em Formulários Públicos
 
