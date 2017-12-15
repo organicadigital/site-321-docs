@@ -12,6 +12,16 @@ O Site 321 disponibiliza os dados em formato JSON para uso como variáveis.
 
 Para simplificar a utilização das expressões e regras de negócio, alguns filtros específicos do Site 321 foram criados. Confira abaixo.
 
+### slices_of
+
+Quebra um array em sub arrays com a quantidade de itens informada. P. ex:
+
+```
+{% assign array = "a|b|c|d" | split: '|' %}
+{% assign slices = array | slices_of: 2 %}
+{{slices}}
+```
+
 ### find_association
 
 Associações são passadas para o Liquid somente como variáveis. Para buscar os dados relacionados será necessário utilizar esse filtro. Imagine o seguinte modelo:
