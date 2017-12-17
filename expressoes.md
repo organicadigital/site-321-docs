@@ -71,3 +71,20 @@ Executa uma busca em um modelo do Site321. Exemplo:
 O primeiro argumento representa a query a ser enviada. Consulte o tópico [Filtros](/filtros.md) para mais informações. É uma representação JSON da busca, sendo mais fácil de construir para fins de leitura.   
 
 O último argumento é o locale a ser pesquisado.
+
+### open_url
+
+Abre e retorna o conteúdo de uma URL. Exemplo:
+
+```javascript
+{% assign content_html = 'http://www.google.com' | open_url %}
+{{ content_html }}
+```
+
+### parse_json
+
+Faz o parse de uma string em JSON. Exemplo:
+
+```javascript
+{% assign json_data = '{"name":{"start":{"0":"B"}}}' | parse_json %}
+```
