@@ -12,4 +12,5 @@
 * [Layout](layout.md)
 * [Notificações](notificacoes.md)
 * [Filtros](filtros.md)
+* [Rotas](rotas.md)
 
