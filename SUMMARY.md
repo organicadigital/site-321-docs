@@ -13,5 +13,4 @@
 * [Layout](layout.md)
 * [Notificações](notificacoes.md)
 * [Filtros](filtros.md)
-* [i18n](i18n.md)
 
