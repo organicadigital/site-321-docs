@@ -329,6 +329,24 @@ news_form:
 
 Isso trará todos os templates para um select, deixando como default o com slug `newsletter`.
 
+# page
+
+Cria um campo select que mostra o nome de páginas existentes. Salvará o id da página \(content\) relacionada. Trará na API o ID do content e o slug do template, para que seja possível trabalhar com o dado.
+
+Levando em conta um template Menu, assim:
+
+```
+name:
+  label: Name
+  type: string
+  required: true
+page:
+  label: Page
+  type: page
+```
+
+O cadastro gerado permitirá criar itens relacionando o campo com uma nova página.
+
 # location
 
 Cria um campo especial que permite a seleção de um endereço, integrando com o Google Maps. Permite que o usuário insira o endereço com um autocomplete, buscando tanto por endereço quanto por nome de estabelecimento.
