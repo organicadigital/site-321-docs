@@ -329,6 +329,18 @@ news_form:
 
 Isso trará todos os templates para um select, deixando como default o com slug `newsletter`.
 
+# form
+
+Cria um campo select que mostra o nome dos formulários disponíveis. Salvará o slug do form relacionado, e trará os dados do formulário na API.
+
+Exemplo:
+
+```
+form:
+  label: Subscription form
+  type: form
+```
+
 # page
 
 Cria um campo select que mostra o nome de páginas existentes. Salvará o id da página \(content\) relacionada. Trará na API o ID do content e o slug do template, para que seja possível trabalhar com o dado.
