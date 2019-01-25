@@ -19,7 +19,7 @@ No caso de não informar a propriedade `required`, ou utilizar o valor `false`, 
 
 ## matcher
 
-Permite a validação do campo utilizando uma expressão regular (regex). O padrão de expressões regulares é o do Ruby. Consulte em http://ruby-doc.org/core-2.1.1/Regexp.html#method-c-new mais informações.
+Permite a validação do campo utilizando uma expressão regular \(regex\). O padrão de expressões regulares é o do Ruby. Consulte em [http://ruby-doc.org/core-2.1.1/Regexp.html\#method-c-new](http://ruby-doc.org/core-2.1.1/Regexp.html#method-c-new) mais informações.
 
 ```
 name:
@@ -34,7 +34,7 @@ Utilize `matcher_message` para a mensagem de erro a ser apresentada ao usuário.
 
 **Importante:** O `matcher` deverá ser informado sem as barras delimitadoras. Correto: `Foo|Bar`; Errado: `/Foo|Bar/`.
 
-## max_length
+## max\_length
 
 Permite definir o tamanho máximo do conteúdo do campo.
 
@@ -51,5 +51,19 @@ Além disso, cria uma representação visual da quantidade de caracteres já usa
 
 Ao habilitar o campo `max_length`, algumas outras opções ficarão disponíveis:
 
-* `stop_on_max_length`: Caso `false`, não bloqueia a entrada dos dados (default: `true`);
-*  `count_down_text`: Mensagem apresentada abaixo do campo, mostrando os campos restantes (default: `Caracteres restantes:`)
+* `stop_on_max_length`: Caso `false`, não bloqueia a entrada dos dados \(default: `true`\);
+* `count_down_text`: Mensagem apresentada abaixo do campo, mostrando os campos restantes \(default: `Caracteres restantes:`\)
+
+## unique
+
+Permite validar um campo como único para aquele template.
+
+```
+email:
+  label: Email
+  type: email
+  unique: true
+```
+
+
+
